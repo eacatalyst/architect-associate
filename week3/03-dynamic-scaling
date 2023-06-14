@@ -1,0 +1,24 @@
+
+https://www.wellarchitectedlabs.com/performance-efficiency/100_labs/100_monitoring_linux_ec2_cloudwatch/5_generating_load/
+
+# enable - auto-assign - public IPs in subnets
+
+
+# sudo amazon-linux-extras install epel -y
+
+# - SSH using CloudShell
+
+sudo yum install stress -y
+
+
+sudo stress --cpu 8 --vm-bytes $(awk '/MemAvailable/{printf "%d\n", $2 * 0.9;}' < /proc/meminfo)k --vm-keep -m 1
+
+#!/bin/bash
+yum update -y
+yum install -y httpd.x86_64
+systemctl start httpd.service
+systemctl enable httpd.service
+echo “Hello World from $(hostname -f)” > /var/www/html/index.html
+
+
+# - Verify Scaling - using Activity Tab of ASG
