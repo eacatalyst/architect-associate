@@ -13,6 +13,11 @@
 11 - Create specific table with uploaded file
 12 - Execute sample queries
 
+# if you need to change the table name
+
+create table healthdatainput as select * from <put your current table name here>
+
+
 -- select count(*) num_records from healthdatainput;
 
 -- SELECT * FROM healthdatainput;
