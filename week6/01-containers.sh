@@ -1,3 +1,5 @@
+# do everything as sudo 
+sudo -i
 # Update package
 sudo apt-get update
 
